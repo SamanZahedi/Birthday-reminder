@@ -2,15 +2,19 @@ import React, { useState } from 'react';
 import data from './data';
 import List from './List';
 function App() {
+  const [people, setPeople] = useState(data);
+  const handleClear = () => {
+    setPeople([])
+  }
   return (
   <main>
-    <section className='container'>
-      <h3>0 birthdays today</h3>
-      <List />
-      <button className='' onClick={()=>{console.log("Clicked!!")}}>Clear All</button>
+    <section className="container">
+      <h3>{people.length} birthdays today</h3>
+      <List people={people} />
+      <button onClick={()=>{handleClear()}}>Clear All</button>
     </section>
-  </main>
-  );
-} 
+    </main>
+  )
+}
 
 export default App;
