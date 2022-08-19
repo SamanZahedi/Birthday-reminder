@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
-import data from './data';
-import List from './List';
+import React, { useState, useEffect } from 'react'
+import Loading from './Loading'
+import Tours from './Tours'
+// ATTENTION!!!!!!!!!!
+// I SWITCHED TO PERMANENT DOMAIN
+const url = 'https://course-api.com/react-tours-project'
 function App() {
-  const [people, setPeople] = useState(data);
-  const handleClear = () => {
-    setPeople([])
-  }
-  return (
-  <main>
-    <section className="container">
-      <h3>{people.length} birthdays today</h3>
-      <List people={people} />
-      <button onClick={()=>{handleClear()}}>Clear All</button>
-    </section>
-    </main>
-  )
+  return <h2>Tours Project Setup</h2>
 }
 
-export default App;
+export default App
